@@ -1,0 +1,59 @@
+{
+ "cats": [
+  {
+   "id": "shop",
+   "de": "Shop",
+   "en": "Shop"
+  },
+  {
+   "id": "quest",
+   "de": "Quest-Belohnung",
+   "en": "Quest reward"
+  },
+  {
+   "id": "event",
+   "de": "Event",
+   "en": "Event"
+  },
+  {
+   "id": "wiki-staff",
+   "de": "Wiki Staff",
+   "en": "Wiki Staff"
+  },
+  {
+   "id": "staff",
+   "de": "Staff",
+   "en": "Staff"
+  }
+ ],
+ "entries": [
+  {
+   "id": "tiger",
+   "name": {
+    "de": "Tiger",
+    "en": "Tiger"
+   },
+   "text": {
+    "de": "Freiwilliger macher dieser wiki",
+    "en": "Creator of this wiki"
+   },
+   "cat": "wiki-staff",
+   "image": "img/tiger.webp",
+   "added": "2026-11-12"
+  },
+  {
+   "id": "louis",
+   "name": {
+    "de": "Louis",
+    "en": "Louis"
+   },
+   "text": {
+    "de": "Ein Admin und Tester für Berlin Response",
+    "en": "A Admin and Tester for Berlin Response"
+   },
+   "cat": "staff",
+   "image": "img/louis.webp",
+   "added": "2026-11-12"
+  }
+ ]
+}

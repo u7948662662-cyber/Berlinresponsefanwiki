@@ -24,6 +24,11 @@
    "id": "staff",
    "de": "Staff",
    "en": "Staff"
+  },
+  {
+   "id": "content-creator",
+   "de": "Content Creator",
+   "en": "Content Creator"
   }
  ],
  "entries": [
@@ -56,4 +61,4 @@
    "added": "2026-11-12"
   }
  ]
-} 
+}

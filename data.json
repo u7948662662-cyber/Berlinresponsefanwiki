@@ -45,6 +45,20 @@
    "cat": "staff",
    "image": "img/louis.webp",
    "added": "2026-11-12"
+  },
+  {
+   "id": "iimetos",
+   "name": {
+    "de": "iimetos",
+    "en": "iimetos"
+   },
+   "text": {
+    "de": "Ein Content Creator und Tester für Berlin Response\n\nSein Tiktok: https://www.tiktok.com/@iimetos\n\nSein Youtube: https://www.youtube.com/@iimetos",
+    "en": "A Content Creator and Tester for Berlin Response\n\nHis TikTok: https://www.tiktok.com/@iimetos\n\nHis Youtube: https://www.youtube.com/@iimetos"
+   },
+   "cat": "content-creator",
+   "image": "img/iimetos.webp?v=1794572086137",
+   "added": "2026-11-13"
   }
  ]
 }

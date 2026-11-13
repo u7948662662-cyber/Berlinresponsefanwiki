@@ -49,6 +49,11 @@
    "id": "locations",
    "de": "Orte",
    "en": "Locations"
+  },
+  {
+   "id": "community-members-worth-mentioning",
+   "de": "Erwähnen werte Community Member",
+   "en": "Community members worth mentioning"
   }
  ],
  "entries": [

@@ -44,6 +44,11 @@
    "id": "jobs",
    "de": "Jobs",
    "en": "Jobs"
+  },
+  {
+   "id": "locations",
+   "de": "Orte",
+   "en": "Locations"
   }
  ],
  "entries": [

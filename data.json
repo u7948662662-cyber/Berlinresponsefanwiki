@@ -98,6 +98,20 @@
    "cat": "staff",
    "image": "img/jwnnndn38eeueu.webp?v=1794576789360",
    "added": "2026-11-13"
+  },
+  {
+   "id": "zauber009",
+   "name": {
+    "de": "Zauber009",
+    "en": "Zauber009"
+   },
+   "text": {
+    "de": "Ein sehr Aktiver und Freundlicher Member der Berlin Response Community",
+    "en": "A very Aktiv and Friendly Member of the Berlin Respnse Community"
+   },
+   "cat": "community-members-worth-mentioning",
+   "image": "",
+   "added": "2026-11-13"
   }
  ]
 }

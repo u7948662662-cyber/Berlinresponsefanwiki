@@ -29,6 +29,11 @@
    "id": "content-creator",
    "de": "Content Creator",
    "en": "Content Creator"
+  },
+  {
+   "id": "items",
+   "de": "Gegenstände",
+   "en": "Items"
   }
  ],
  "entries": [

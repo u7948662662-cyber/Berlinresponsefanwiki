@@ -39,6 +39,11 @@
    "id": "cars",
    "de": "Autos",
    "en": "Cars"
+  },
+  {
+   "id": "jobs",
+   "de": "Jobs",
+   "en": "Jobs"
   }
  ],
  "entries": [

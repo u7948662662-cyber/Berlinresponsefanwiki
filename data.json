@@ -154,6 +154,20 @@
    "cat": "wiki-staff",
    "image": "img/zauber.webp?v=1794673523712",
    "added": "2026-11-14"
+  },
+  {
+   "id": "luca",
+   "name": {
+    "de": "Luca",
+    "en": "Luca"
+   },
+   "text": {
+    "de": "Ein aktives Mitglied der Community er ist fast immer online.\n\nZudem der Ersteller dieses Wikis.",
+    "en": "An active member of the community he is almost always online.\n\nAlso, the creator of this wiki."
+   },
+   "cat": "wiki-staff",
+   "image": "img/luca.webp?v=1794673872797",
+   "added": "2026-11-14"
   }
  ]
 }

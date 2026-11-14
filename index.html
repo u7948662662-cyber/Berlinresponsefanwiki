@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Berlin Response Wiki</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📖%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,600;0,800;1,800;1,900&display=swap" rel="stylesheet">
 <style>
@@ -121,6 +122,10 @@ footer a{color:var(--mu)}
 .side .langsw{margin:0 0 10px}
 .side .langsw button{border-color:var(--bd);color:var(--tx)}
 .side .langsw .on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.tx{overflow-wrap:anywhere}
+.tx a.ext::after{content:" ↗";font-size:.8em}
+.tx .dead{color:#c0392b;text-decoration:underline dotted}
+.small{font-size:.85rem}
 </style>
 </head>
 <body>
@@ -180,7 +185,7 @@ let lang=(()=>{try{const l=localStorage.getItem('wikiLang');if(l==='de'||l==='en
 const WIKI_NAME='Berlin Response Wiki';
 const T={
 de:{soundOn:'🔕 Ton an',soundOff:'🔔 Ton aus',days:'Tage',hours:'Stunden',minutes:'Minuten',seconds:'Sekunden',release:'Release: 01.12.2026 · 17:00 Uhr (Europe/Berlin)',done:'Berlin Response ist jetzt auf Roblox verfügbar. Jetzt spielen!',towiki:'📖 Zur Wiki',
-nav:'Navigation',home:'Hauptseite',all:'Alle Einträge',random:'Zufälliger Eintrag',cats:'Kategorien',search:'Wiki durchsuchen …',welcome:'Willkommen im',introA:'Hier findest du alle Einträge mit Bild, Kategorie und Beschreibung. Aktuell gibt es',entriesWord:'Einträge',recent:'Zuletzt hinzugefügt',sortHint:'zum Sortieren auf die Spaltenköpfe klicken',img:'Bild',name:'Name',cat:'Kategorie',added:'Hinzugefügt',none:'Keine Einträge gefunden.',loading:'Lade …',nf:'Nicht gefunden',noaccess:'Kein Zugriff',static:'Diese Version ist schreibgeschützt.',
+nav:'Navigation',home:'Hauptseite',all:'Alle Einträge',random:'Zufälliger Eintrag',cats:'Kategorien',search:'Wiki durchsuchen …',welcome:'Willkommen im',introA:'Hier findest du alle Einträge mit Bild, Kategorie und Beschreibung. Aktuell gibt es',entriesWord:'Einträge',recent:'Zuletzt hinzugefügt',sortHint:'zum Sortieren auf die Spaltenköpfe klicken',img:'Bild',name:'Name',cat:'Kategorie',added:'Hinzugefügt',none:'Keine Einträge gefunden.',loading:'Lade …',nf:'Nicht gefunden',noaccess:'Kein Zugriff',static:'Diese Version ist schreibgeschützt.',linkHelp:'Links im Text: https://… wird automatisch klickbar · [[Eintragsname]] verlinkt einen anderen Eintrag · [[Name|eigener Text]] · [Text](https://…)',linkEntry:'Anderen Eintrag verlinken (fügt ihn an der Cursor-Stelle ein)',noEntry:'Eintrag nicht gefunden',
 ghTokenLabel:'GitHub-Token',ghHelp:'So meldest du dich an: (1) Du brauchst ein GitHub-Konto, und der Owner muss dich zu diesem Repository einladen (Einladung bei GitHub annehmen). (2) Erstelle bei GitHub einen Zugangs-Token: der Owner einen „Fine-grained token“ nur für dieses Repository (Rechte Contents und Administration: Read and write), Mitarbeiter einen „Token (classic)“ mit Haken bei public_repo. (3) Füge ihn hier ein. Er bleibt nur in deinem Browser gespeichert.',ghLinkOwner:'Owner: Fine-grained Token erstellen',ghLinkEditor:'Mitarbeiter: Classic Token erstellen',ghHint:'Dein Zugang läuft über deinen GitHub-Token. Den verwaltest du bei GitHub.',ghAccIntro:'Mitarbeiter sind GitHub-Konten mit Schreibrechten in diesem Repository. Hier lädst du sie ein oder entfernst sie.',ghUser:'GitHub-Benutzername',ghInvite:'Einladen',ghInvited:'Einladung gesendet – muss bei GitHub angenommen werden',ghSettings:'Zugriffsrechte bei GitHub öffnen',ghNoWrite:'Dieses Konto hat keine Schreibrechte in diesem Repository.',ghLive:'Gespeichert. Für Besucher erscheint die Änderung nach ca. 1–2 Minuten.',ghE401:'Token ungültig oder abgelaufen.',ghE403:'Keine Berechtigung – Token-Rechte prüfen.',ghE404:'Nicht gefunden – Repository oder Datei prüfen.',ghE409:'Konflikt – Seite neu laden und erneut versuchen.',badCat:'Bitte eine gültige Kategorie wählen.',catInUse:'Diese Kategorie wird noch von Einträgen verwendet.',badImg:'Bild ungültig oder zu groß.',catBoth:'Kategorien brauchen einen deutschen UND englischen Namen.',
 login:'Anmelden',logout:'Abmelden',user:'Benutzername',pass:'Passwort',show:'Passwort anzeigen',account:'Konto',accounts:'Accounts verwalten',footLogin:'Editor-Login',roleOwner:'Owner',roleEditor:'Editor',
 oldPass:'Aktuelles Passwort',newPass:'Neues Passwort',change:'Passwort ändern',changed:'Passwort geändert ✓',ownerPassHint:'Das Owner-Passwort änderst du in Netlify (Umgebungsvariable OWNER_PASS).',
@@ -188,7 +193,7 @@ accIntro:'Editoren dürfen Einträge und Kategorien anlegen, bearbeiten und lös
 edit:'Bearbeiten',newEntry:'Neuer Eintrag',editEntry:'Eintrag bearbeiten',delEntry:'Eintrag löschen',del:'Löschen',sure:'Wirklich löschen?',save:'Speichern',saving:'Speichere …',openEntry:'Öffne einen Eintrag, um ihn zu bearbeiten oder zu löschen.',bothLangs:'Name und Text bitte auf Deutsch UND Englisch ausfüllen.',needAll:'Bitte alle Felder mit * ausfüllen.',
 manageCats:'Kategorien verwalten',newCat:'Neue Kategorie',add:'Hinzufügen',existing:'Vorhandene Kategorien',inUse:'in Benutzung',noCats:'Noch keine Kategorien.',noCatYet:'Noch keine Kategorie – zuerst eine anlegen.'},
 en:{soundOn:'🔕 Sound on',soundOff:'🔔 Sound off',days:'Days',hours:'Hours',minutes:'Minutes',seconds:'Seconds',release:'Release: 01.12.2026 · 5:00 PM (Europe/Berlin)',done:'Berlin Response is now available on Roblox. Play NOW!',towiki:'📖 To the wiki',
-nav:'Navigation',home:'Home',all:'All entries',random:'Random entry',cats:'Categories',search:'Search the wiki …',welcome:'Welcome to the',introA:'Here you will find all entries with image, category and description. There are currently',entriesWord:'entries',recent:'Recently added',sortHint:'click a column header to sort',img:'Image',name:'Name',cat:'Category',added:'Added',none:'No entries found.',loading:'Loading …',nf:'Not found',noaccess:'No access',static:'This version is read-only.',
+nav:'Navigation',home:'Home',all:'All entries',random:'Random entry',cats:'Categories',search:'Search the wiki …',welcome:'Welcome to the',introA:'Here you will find all entries with image, category and description. There are currently',entriesWord:'entries',recent:'Recently added',sortHint:'click a column header to sort',img:'Image',name:'Name',cat:'Category',added:'Added',none:'No entries found.',loading:'Loading …',nf:'Not found',noaccess:'No access',static:'This version is read-only.',linkHelp:'Links in text: https://… becomes clickable automatically · [[Entry name]] links to another entry · [[Name|custom text]] · [Text](https://…)',linkEntry:'Link another entry (inserts it at the cursor)',noEntry:'Entry not found',
 ghTokenLabel:'GitHub token',ghHelp:'How to log in: (1) You need a GitHub account and the owner must invite you to this repository (accept the invitation on GitHub). (2) Create an access token on GitHub: the owner a “fine-grained token” for this repository only (Contents and Administration: Read and write), collaborators a “token (classic)” with public_repo ticked. (3) Paste it here. It is only stored in your browser.',ghLinkOwner:'Owner: create fine-grained token',ghLinkEditor:'Collaborator: create classic token',ghHint:'Your access uses your GitHub token. Manage it on GitHub.',ghAccIntro:'Collaborators are GitHub accounts with write access to this repository. Invite or remove them here.',ghUser:'GitHub username',ghInvite:'Invite',ghInvited:'Invitation sent – must be accepted on GitHub',ghSettings:'Open access settings on GitHub',ghNoWrite:'This account has no write access to this repository.',ghLive:'Saved. Visitors will see the change in about 1–2 minutes.',ghE401:'Token invalid or expired.',ghE403:'No permission – check the token permissions.',ghE404:'Not found – check repository or file.',ghE409:'Conflict – reload the page and try again.',badCat:'Please choose a valid category.',catInUse:'This category is still used by entries.',badImg:'Image invalid or too large.',catBoth:'Categories need a German AND English name.',
 login:'Log in',logout:'Log out',user:'Username',pass:'Password',show:'Show password',account:'Account',accounts:'Manage accounts',footLogin:'Editor login',roleOwner:'Owner',roleEditor:'Editor',
 oldPass:'Current password',newPass:'New password',change:'Change password',changed:'Password changed ✓',ownerPassHint:'You change the owner password in Netlify (environment variable OWNER_PASS).',
@@ -328,9 +333,24 @@ function rows(l){
  const th=(k,x)=>`<th class="sr" data-k="${k}">${x}${S.k===k?(S.d>0?' ▲':' ▼'):' ⇅'}</th>`;
  return `<p class="mu">${l.length} ${t('entriesWord')} · ${t('sortHint')}</p><div class="tw"><table class="wt"><thead><tr><th>${t('img')}</th>${th('name',t('name'))}${th('cat',t('cat'))}</tr></thead><tbody>`+l.map(e=>`<tr><td>${thumb(e,'th')}</td><td><a href="#e-${E(e.id)}">${E(L(e.name))}</a></td><td>${E(catName(e.cat))}</td></tr>`).join('')+'</tbody></table></div>';
 }
+function rich(raw){
+ const cut=/&(?:quot|#39|lt|gt);/;
+ return E(raw).replace(/\[\[([^\]|\n]{1,80})(?:\|([^\]\n]{1,80}))?\]\]|\[([^\]\n]{1,100})\]\((https?:\/\/[^\s)]+)\)|https?:\/\/[^\s<]+/gi,(m,a,b,lt,lu)=>{
+  if(a!==undefined){
+   const k=a.trim().toLowerCase(),e=ENTRIES.find(x=>[x.id,x.name.de,x.name.en].some(v=>E(v).toLowerCase()===k));
+   const lab=b!==undefined&&b.trim()?b.trim():(e?E(L(e.name)):a.trim());
+   return e?`<a class="int" href="#e-${E(e.id)}">${lab}</a>`:`<span class="dead" title="${E(t('noEntry'))}">${lab}</span>`;
+  }
+  if(lt!==undefined)return `<a class="ext" href="${lu}" target="_blank" rel="noopener noreferrer nofollow">${lt}</a>`;
+  let u=m,rest='';const c=u.search(cut);if(c>=0){rest=u.slice(c);u=u.slice(0,c);}
+  const tr=u.match(/[.,;:!?)\]]+$/);if(tr){rest=tr[0]+rest;u=u.slice(0,-tr[0].length);}
+  return u.length>8?`<a class="ext" href="${u}" target="_blank" rel="noopener noreferrer nofollow">${u}</a>`+rest:m;
+ });
+}
+const lnkSel=id=>{const o=ENTRIES.filter(x=>x.id!==id);return o.length?`<label>${t('linkEntry')}<select id="f-lnk"><option value="">–</option>${o.map(x=>`<option value="${E(x.id)}">${E(L(x.name))}</option>`).join('')}</select></label>`:'';};
 function entry(e){
  const c=catName(e.cat);
- return `<h1>${E(L(e.name))}</h1>${ME?`<p class="ab"><a class="bt" href="#edit-${E(e.id)}">✏️ ${t('editEntry')}</a> <button class="bt dng" data-del="${E(e.id)}">🗑️ ${t('delEntry')}</button></p>`:''}<div class="eb"><aside class="ib">${thumb(e,'im')}<dl><dt>${t('cat')}</dt><dd>${c?`<a href="#c-${E(e.cat)}">${E(c)}</a>`:'–'}</dd><dt>${t('added')}</dt><dd>${E(e.added||'–')}</dd></dl></aside><div class="tx">${E(L(e.text)).split('\n').map(p=>`<p>${p}</p>`).join('')}</div></div>`;
+ return `<h1>${E(L(e.name))}</h1>${ME?`<p class="ab"><a class="bt" href="#edit-${E(e.id)}">✏️ ${t('editEntry')}</a> <button class="bt dng" data-del="${E(e.id)}">🗑️ ${t('delEntry')}</button></p>`:''}<div class="eb"><aside class="ib">${thumb(e,'im')}<dl><dt>${t('cat')}</dt><dd>${c?`<a href="#c-${E(e.cat)}">${E(c)}</a>`:'–'}</dd><dt>${t('added')}</dt><dd>${E(e.added||'–')}</dd></dl></aside><div class="tx">${rich(L(e.text)).split('\n').map(p=>`<p>${p}</p>`).join('')}</div></div>`;
 }
 function home(){
  return `<h1>${t('welcome')} ${E(WIKI_NAME)}</h1><p>${t('introA')} <b>${ENTRIES.length}</b> ${t('entriesWord')}.</p>${CATS.length?`<h2>${t('cats')}</h2><div class="cards">${CATS.map(c=>`<a href="#c-${E(c.id)}" style="--c:var(--ac)">${E(L(c))}<br><span class="mu">${ENTRIES.filter(e=>e.cat===c.id).length} ${t('entriesWord')}</span></a>`).join('')}</div>`:''}<h2>${t('recent')}</h2>`+rows(ENTRIES.slice(-5).reverse());
@@ -365,10 +385,12 @@ const catSel=v=>CATS.length?`<select id="f-cat">${CATS.map(c=>`<option value="${
 function editor(id){
  const ex=ENTRIES.find(x=>x.id===id),e=ex||{name:{},text:{},image:''};
  const f=(k,lab,v,ta)=>ta?`<label>${lab}<textarea id="f-${k}" rows="6">${E(v||'')}</textarea></label>`:`<label>${lab}<input id="f-${k}" value="${E(v||'')}"></label>`;
- return `<h1>${ex?t('editEntry'):t('newEntry')}</h1><p class="mu">${t('bothLangs')}</p><div class="ed">${f('nd','Name (DE) *',e.name.de)}${f('ne','Name (EN) *',e.name.en)}<label>${t('cat')} *${catSel(e.cat)}</label>${f('td','Text (DE) *',e.text.de,1)}${f('te','Text (EN) *',e.text.en,1)}<label>${t('img')}<input id="f-img" type="file" accept="image/*"></label><div id="f-prev">${e.image?`<img class="im" src="${E(e.image)}" alt="">`:''}</div><p><button id="f-save">${t('save')}</button>${ex?` <button class="bt dng" data-del="${E(e.id)}">${t('del')}</button>`:''} <span id="f-msg" class="mu"></span></p></div>`;
+ return `<h1>${ex?t('editEntry'):t('newEntry')}</h1><p class="mu">${t('bothLangs')}</p><div class="ed">${f('nd','Name (DE) *',e.name.de)}${f('ne','Name (EN) *',e.name.en)}<label>${t('cat')} *${catSel(e.cat)}</label>${f('td','Text (DE) *',e.text.de,1)}${f('te','Text (EN) *',e.text.en,1)}<p class="mu small">${t('linkHelp')}</p>${lnkSel(id)}<label>${t('img')}<input id="f-img" type="file" accept="image/*"></label><div id="f-prev">${e.image?`<img class="im" src="${E(e.image)}" alt="">`:''}</div><p><button id="f-save">${t('save')}</button>${ex?` <button class="bt dng" data-del="${E(e.id)}">${t('del')}</button>`:''} <span id="f-msg" class="mu"></span></p></div>`;
 }
 function bindEd(id){
  const ex=ENTRIES.find(x=>x.id===id);let img=null;
+ let last=$('f-td');['f-td','f-te'].forEach(i=>{$(i).onfocus=()=>{last=$(i);};});
+ if($('f-lnk'))$('f-lnk').onchange=ev=>{const x=ENTRIES.find(z=>z.id===ev.target.value);if(!x)return;const ta=last,nm=(ta.id==='f-te'?x.name.en:x.name.de).replace(/[\]|]/g,''),a=ta.selectionStart==null?ta.value.length:ta.selectionStart,b=ta.selectionEnd==null?a:ta.selectionEnd,ins='[['+nm+']]';ta.value=ta.value.slice(0,a)+ins+ta.value.slice(b);ta.focus();ta.selectionStart=ta.selectionEnd=a+ins.length;ev.target.value='';};
  $('f-img').onchange=async ev=>{const f=ev.target.files[0];if(!f)return;const r=await shrink(f);if(r){img=r;$('f-prev').innerHTML=`<img class="im" src="${r}" alt="">`;}};
  $('f-save').onclick=async()=>{
   const v=k=>$('f-'+k)?$('f-'+k).value.trim():'',m=$('f-msg');

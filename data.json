@@ -140,6 +140,20 @@
    "cat": "staff",
    "image": "img/mrcroth.webp?v=1794672989478",
    "added": "2026-11-14"
+  },
+  {
+   "id": "zauber",
+   "name": {
+    "de": "Zauber",
+    "en": "Zauber"
+   },
+   "text": {
+    "de": "Ein sehr Aktiver und Freundlicher Member der Berlin Response Community und ist freund mit [[Louis]] und anderen Staff.",
+    "en": "."
+   },
+   "cat": "wiki-staff",
+   "image": "img/zauber.webp?v=1794673485223",
+   "added": "2026-11-14"
   }
  ]
 }
